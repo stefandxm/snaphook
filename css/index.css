@@ -77,7 +77,6 @@ A
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5%;
-	padding: 20px;
  }
 
 .MainContent{
@@ -98,7 +97,7 @@ A
 	vertical-align: top;
  	overflow: auto;
 	top: 0;
-	bottom: 30;
+	bottom: 40;
 	left: 0;
 	right: 0;
 	padding: 16px;

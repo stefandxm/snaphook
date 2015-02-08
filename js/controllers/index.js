@@ -88,16 +88,6 @@ var Snaphook = angular.module('Snaphook', []);
  function parse(input) {
 
     var output = parseLinks(input);
-
-    if (output.substring(0,4)=="&rt;") {
-
-      output = output.substring(4, output.length);
-    } else {
-
-      output = parseDecoration(output, "**", "<b>", "</b>");
-      output = parseDecoration(output, "*", "<i>", "</i>");
-      output = parseDecoration(output, "_", "<u>", "</u>");
-    }
   
     return output;
  }
