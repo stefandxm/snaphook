@@ -114,7 +114,7 @@ $( document ).ready(function() {
 	}
 	id = id%8;		
 
-	$('#ChatTable tr:last').after("<tr><td class=chat_nick style=\"text-align:right;\"><div class=text"+id+">" + from + "</div></td><td width=0><td><div class=text"+id+">"+parse(msg)+"</div></td></tr>");
+	$('#ChatTable tr:last').after("<tr><td class=chat_nick style=\"text-align:right;\"><div class=text"+id+">" + from + "</div></td><td class=cell_divider></td><td><div class=text"+id+">"+parse(msg)+"</div></td></tr>");
 
 	$("#LobbyChatControllerInner").scrollTop($("#LobbyChatControllerInner")[0].scrollHeight);
  }
@@ -240,6 +240,9 @@ Snaphook.controller('CommunicationController',
 
 
             Snaphook.Connection = con;
+
+		for (var a=0; a<60; a++) AppendLobbyChat("&nbsp;", "&nbsp;");
+
             $('#MainWindow').fadeIn();
 	    $('#LobbyChatInput').focus();
         }

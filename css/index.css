@@ -6,18 +6,20 @@
 	background-size: cover;
 	color:white;
 	font-family: Tahoma,Verdana;
-	line-height: 150%;
+	line-height: 125%;
 	font-size: 9pt;
  } 
 
 table {
 	border-spacing: 0;
+	padding: 0;
+	margin: 0;
 }
 
 
 td {
 	font-family: Tahoma,Verdana;
-	line-height: 150%;
+	line-height: 120%;
 	font-size: 9pt;
 	vertical-align: top;
 	padding: 0;
@@ -32,13 +34,17 @@ tr {
 
 .chat_nick {
 
-	padding-right: 10px;
+	padding-right: 5px;
 	max-width: 150;
 	overflow: hidden;
 	text-align: right;
-	text-transform: lowercase;
 }
 
+.cell_divider {
+
+	background-color: rgba(255,255,255,0.3);
+	width: 1px;
+}
 
 input    {
 	border: 1px solid #999;
@@ -141,14 +147,14 @@ A
 	padding: 16px;
 }
 
-.text0 { color: #ffffff; }
-.text1 { color: #ffffdd; }
-.text2 { color: #ffddff; }
-.text3 { color: #ddffff; }
-.text4 { color: #ddddff; }
-.text5 { color: #ffdddd; }
-.text6 { color: #ddffdd; }
-.text7 { color: #dddddd; }
+.text0 { color: #ffffff; margin-left: 5px; }
+.text1 { color: #ffffdd; margin-left: 5px;}
+.text2 { color: #ffddff; margin-left: 5px;}
+.text3 { color: #ddffff; margin-left: 5px;}
+.text4 { color: #ddddff; margin-left: 5px;}
+.text5 { color: #ffdddd; margin-left: 5px;}
+.text6 { color: #ddffdd; margin-left: 5px;}
+.text7 { color: #dddddd; margin-left: 5px;}
 
 #BoardRoomInner
 {
