@@ -6,7 +6,7 @@ Something web based
 
 License
 -----------
-Public Domain
+Public Domain. How ever please note that dependencies may have different license(s).
 
 Dependencies
 -----------
