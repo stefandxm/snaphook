@@ -42,12 +42,6 @@ A
         color: #ffffff;
 }
 
-.me {
-
-	text-decoration: bolder;
-	font-size: 12pt;
-}
-
 .Headline
 {
 	background-color:rgba(0,0,0,0.3);
@@ -98,10 +92,11 @@ A
 	text-align: left;
 	vertical-align: top;
  	overflow: auto;
-	top: 35;
+	top: 0;
 	bottom: 30;
 	left: 0;
 	right: 0;
+	padding: 16px;
 }
 
 .text0 { color: #ffffff; }
@@ -120,6 +115,16 @@ A
  	overflow: auto;
 }
 
+button {
+
+	padding: 5px;
+}
+
+input {
+
+	padding: 5px;
+}
+
 #LobbyChatControllerBottom
 {
 	position: absolute;
@@ -128,6 +133,7 @@ A
 	left: 0;
 	right: 0;
 	display:block;
+	padding: 16px;
 }
 #LobbyChatInput
 {

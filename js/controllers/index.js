@@ -46,20 +46,59 @@ var Snaphook = angular.module('Snaphook', []);
     return output;
  }
 
- function parseMe(input) {
+ function parseDecoration(input, what, insertbefore, insertafter) {
 
-   if (input.length>4 && input.substring(0, 4) == "/me ") {
+    var current=0;
+    var output="";
+    var found=0;
 
-     return "<span class=me>"+input.substring(4, input.length)+"</span>";     
-   }
+    while (current<input.length) {
 
-   return input;
+      var char = input.charAt(current);
+
+      if (!found) {
+
+        if (input.substring(current,current+what.length)==what) {
+
+	  current+=what.length;
+          output+=insertbefore;
+          found=1;
+          continue;
+        }
+      } else {
+
+        if (input.substring(current,current+what.length)==what) {
+
+	  current+=what.length;
+          output+=insertafter;
+          found=0;
+ 	  continue;
+        }
+      }
+
+      output+=char;
+      current++;
+    }
+
+    if (found==1) output+="\">" + input.substring(start,current) + "</a>";
+
+    return output;
  }
 
  function parse(input) {
 
     var output = parseLinks(input);
-    output = parseMe(output);
+
+    if (output.substring(0,4)=="&rt;") {
+
+      output = output.substring(4, output.length);
+    } else {
+
+      output = parseDecoration(output, "**", "<b>", "</b>");
+      output = parseDecoration(output, "*", "<i>", "</i>");
+      output = parseDecoration(output, "_", "<u>", "</u>");
+    }
+  
     return output;
  }
 
