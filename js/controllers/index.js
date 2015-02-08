@@ -127,7 +127,7 @@ GlobalLobbyRoster = [];
 Snaphook.controller('CommunicationController', 
     function ($scope) 
     {
-        $scope.BOSH_SERVICE = 'http://deusexmachinae.se:7070/http-bind';
+        $scope.BOSH_SERVICE = 'http://snaphook.se:7070/http-bind';
         $scope.Connection = null;
         $scope.JID = '';
         $scope.Snaphooker = '';
@@ -233,6 +233,23 @@ Snaphook.controller('CommunicationController',
             }            
         }
 
+        $scope.OnAuthenticationFail = function ()
+        {
+            log('Failed to authenticate.');
+            $('#loginbutton').removeAttr("disabled");
+        }
+        $scope.OnConnectFail = function ()
+        {
+            log('Failed to connect.');
+            $('#loginbutton').removeAttr("disabled");
+        }
+         $scope.OnDisconnected = function ()
+        {
+            log('Disconnecting.');
+            $('#loginbutton').removeAttr("disabled");
+        }
+
+
 
         $scope.OnConnectRegister = function(status)
         {
@@ -246,22 +263,28 @@ Snaphook.controller('CommunicationController',
             {
                 log("registered!");
             }
-            else if (status == Strophe.Status.CONNECTING) {
+            else if (status == Strophe.Status.CONNECTING) 
+            {
                 log('Connecting.');
-            } else if (status == Strophe.Status.CONNFAIL) {
-                log('Failed to connect.');
-                $('#loginbutton').removeAttr("disabled");
             } 
-            else if (status == Strophe.Status.AUTHFAIL) {
-                log('Failed to authenticate.');
-                $('#loginbutton').removeAttr("disabled");
-            } else if (status == Strophe.Status.DISCONNECTING) {
-                log('Disconnecting.');
-                $('#loginbutton').removeAttr("disabled");
-            } else if (status == Strophe.Status.DISCONNECTED) {
-                log('Disconnected.');
-                $('#loginbutton').removeAttr("disabled");
-            } else if (status == Strophe.Status.CONNECTED) {
+            else if (status == Strophe.Status.CONNFAIL) 
+            {
+                $scope.OnConnectFail();
+            } 
+            else if (status == Strophe.Status.AUTHFAIL) 
+            {
+                $scope.OnAuthenticationFail();
+            } 
+            else if (status == Strophe.Status.DISCONNECTING) 
+            {
+                $scope.OnDisconnected();
+            } 
+            else if (status == Strophe.Status.DISCONNECTED) 
+            {
+                $scope.OnDisconnected();
+            } 
+            else if (status == Strophe.Status.CONNECTED) 
+            {
                 log('Connected.');
                 $scope.Connection.addHandler($scope.OnMessage, null, 'message', null, null,  null); 
                 $scope.Connection.addHandler($scope.OnRoster, null, 'roster', null, null,  null); 
