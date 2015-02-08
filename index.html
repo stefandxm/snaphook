@@ -1,0 +1,71 @@
+<html ng-app="Snaphook">
+    <head>
+        <title>Snaphook</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8;"/>
+        <script src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/controllers/index.js"></script>
+        <script src="js/strophe.js"></script>
+        <script src="js/strophe.muc.js"></script>
+        <script src="js/strophe.register.js"></script>
+        
+    </head>
+    
+    <body>     
+         <div id="LoginControllerOuter" ng-controller="CommunicationController">
+            <div id="LoginControllerInner">
+                <div>
+                    <p>Username
+                        <input type="text" id="username"/>
+                    </p>
+                </div>
+                <div>
+                    <p>Password
+                        <input type="password" id="password"/>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <button id="loginbutton" ng-click="Login()">Log in</button>
+                    </p>
+                </div>
+            </div>
+         </div>
+
+         <div id = "MainWindow" ng-controller="MainWindowController">
+            <!--<button id="ShowLobby" ng-click="ShowLobby()">Lobby</button>
+            <button id="ShowBoardRoom" ng-click="ShowBoardRoom()">Board room</button>-->
+
+             <div id="BoardRoomOuter" class="MainContent">
+                ARNE OUT
+                <div id="BoardRoomInner">
+                    BERIT INNER<br/>
+                </div>
+             </div>
+
+             <div class="Headline">             
+                    <i>-"I still don't get golf." -Lance Armstrong</i>
+             </div>
+
+             <div id="LobbyChatControllerOuter" class ="MainContent" ng-controller="LobbyChatController">
+                <div id="LobbyChatControllerInner">
+                </div>
+                <!--
+                <div id="UsersInLobby">
+                </div>
+                -->
+                <div id="LobbyChatControllerBottom">
+                    <input id="LobbyChatInput" type="text" value="" ng-keydown="lobbymessaged($event)"></input>
+                </div>
+             </div>
+         </div>
+
+
+         <div id="DebugOuter" style="display:none;">
+            <div id="DebugInner">
+            </div>
+         </div>
+
+    </body>
+</html>

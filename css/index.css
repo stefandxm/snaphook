@@ -1,0 +1,163 @@
+ body {
+ 	background-color:#0b0b0b;
+ 	background-image: url('../img/bluesman.jpg');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-size: cover;
+	color:white;
+	font-family: Tahoma,Verdana;
+	line-height: 150%;
+	font-size: 9pt;
+ } 
+
+ #LoginControllerOuter{
+	background-color:rgba(0,0,0,0.7);
+	left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);    
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+	box-shadow: 5px 5px 10px black;
+ 	width: 230px;
+ 	margin: auto;
+ 	padding: 30px;
+ }
+
+#LoginControllerInner
+{
+	text-align: right;
+	vertical-align: top;
+}
+
+#BoardRoomOuter
+{
+	display: none;
+}
+
+A
+{
+        color: #ffffff;
+}
+
+.me {
+
+	text-decoration: bolder;
+	font-size: 12pt;
+}
+
+.Headline
+{
+	background-color:rgba(0,0,0,0.3);
+	
+	position: absolute;
+	font-size: 15pt;
+	text-align: center;
+	vertical-align: center;
+	margin: 5px;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: block;
+	box-shadow: 0px 0px 10px #333333;
+	color: #fff8c6;
+	font-family: georgia,arial;
+}
+
+#MainWindow
+{
+	position: absolute;
+	background-color:rgba(0,0,0,0.7);
+	box-shadow: 5px 5px 10px black;
+	width: 80%;
+	height: 80%;
+	left: 10%;
+ 	display: none;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	padding: 20px;
+ }
+
+.MainContent{
+}
+
+#UsersInLobby
+{
+	width:130px;
+	text-align: left;
+	vertical-align: top;
+	height:230px;
+ 	overflow: auto;	
+}
+#LobbyChatControllerInner
+{
+	position: absolute;
+	text-align: left;
+	vertical-align: top;
+ 	overflow: auto;
+	top: 35;
+	bottom: 30;
+	left: 0;
+	right: 0;
+}
+
+.text0 { color: #ffffff; }
+.text1 { color: #ffffee; }
+.text2 { color: #ffeeff; }
+.text3 { color: #eeffff; }
+.text4 { color: #eeeeff; }
+.text5 { color: #ffeeee; }
+.text6 { color: #eeffee; }
+.text7 { color: #eeeeee; }
+
+#BoardRoomInner
+{
+	text-align: left;
+	vertical-align: top;
+ 	overflow: auto;
+}
+
+#LobbyChatControllerBottom
+{
+	position: absolute;
+	height:30px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display:block;
+}
+#LobbyChatInput
+{
+	background-color:rgba(0,0,0,0.5);
+	color:white;	
+	width: 100%;
+	margin-top: 5px;
+}
+
+ #DebugOuter{
+	background-color:rgba(0,0,0,0.5);
+	left: 50%;
+    position: absolute;
+    top: 95%;
+    transform: translate(-50%, -80%);    
+    -webkit-transform: translate(-50%, -80%);
+    -moz-transform: translate(-50%, -80%);
+    -ms-transform: translate(-50%, -80%);
+
+	box-shadow: 5px 5px 5px black;
+ 	width: 600px;
+ 	margin: auto;
+ 	padding: 30px;
+ }
+
+#DebugInner
+{
+	text-align: left;
+	vertical-align: top;
+	height:40px;
+ 	overflow: auto;
+ 	font-size: 10px;
+}
