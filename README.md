@@ -10,7 +10,7 @@ Public Domain. How ever please note that dependencies may have different license
 
 Dependencies
 -----------
-Strophe.js and some extensions
+Angular, Strophe.js and some extensions
 
 Contributors in order of appearance
 -----------
