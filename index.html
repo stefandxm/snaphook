@@ -18,9 +18,10 @@
 			No dogs or women allowed.
 		</div>
             <div id="LoginControllerInner">
+		<form>
                 <div>
                     <p>Username
-                        <input type="text" id="username"/>
+                        <input type="text" id="username" autofocus/>
                     </p>
                 </div>
                 <div>
@@ -33,6 +34,7 @@
                         <button id="loginbutton" ng-click="Login()">Log in</button>
                     </p>
                 </div>
+		</form>
             </div>
          </div>
 
@@ -59,7 +61,7 @@
                 </div>
                 -->
                 <div id="LobbyChatControllerBottom">
-                    <input id="LobbyChatInput" type="text" value="" ng-keydown="lobbymessaged($event)"></input>
+                    <input id="LobbyChatInput" type="text" value="" ng-keydown="lobbymessaged($event)" autocorrect="off" autocapitalize="off" spellcheck="false"></input>
                 </div>
              </div>
          </div>

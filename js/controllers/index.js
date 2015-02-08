@@ -233,7 +233,8 @@ Snaphook.controller('CommunicationController',
 
 
             Snaphook.Connection = con;
-            $('#MainWindow').show();
+            $('#MainWindow').fadeIn();
+	    $('#LobbyChatInput').focus();
         }
 
         $scope.OnConnect = function(status)

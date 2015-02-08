@@ -112,13 +112,13 @@ A
 }
 
 .text0 { color: #ffffff; }
-.text1 { color: #ffffee; }
-.text2 { color: #ffeeff; }
-.text3 { color: #eeffff; }
-.text4 { color: #eeeeff; }
-.text5 { color: #ffeeee; }
-.text6 { color: #eeffee; }
-.text7 { color: #eeeeee; }
+.text1 { color: #ffffdd; }
+.text2 { color: #ffddff; }
+.text3 { color: #ddffff; }
+.text4 { color: #ddddff; }
+.text5 { color: #ffdddd; }
+.text6 { color: #ddffdd; }
+.text7 { color: #dddddd; }
 
 #BoardRoomInner
 {
