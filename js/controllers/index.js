@@ -177,7 +177,7 @@ Snaphook.controller('CommunicationController',
 
         $scope.GotUsers= function(users)
         {
-            // "<iq xmlns="jabber:client" from="lobby@conference.system" to="stefan@users/web" id="2:sendIQ" type="result"><query xmlns="http://jabber.org/protocol/disco#items"><item jid="lobby@conference.system/stefan" name="stefan"/><item jid="lobby@conference.system/dxmpp" name="dxmpp"/></query></iq>"
+            // "<iq xmlns="jabber:client" from="lobby@conference.system" to="stefan@users" id="2:sendIQ" type="result"><query xmlns="http://jabber.org/protocol/disco#items"><item jid="lobby@conference.system/stefan" name="stefan"/><item jid="lobby@conference.system/dxmpp" name="dxmpp"/></query></iq>"
             log("GotUsers");
         }
 
@@ -273,7 +273,7 @@ Snaphook.controller('CommunicationController',
                 $('#loginbutton').attr("disabled", "disabled");
                 $scope.Connection = new Strophe.Connection($scope.BOSH_SERVICE);
                 $scope.Snaphooker= $('#username').val();
-                $scope.JID =  $scope.Snaphooker + '@snaphookers/web';
+                $scope.JID =  $scope.Snaphooker + '@snaphookers';
                 $scope.Connection.connect($scope.JID, $('#password').val(), $scope.OnConnect);
             }
 
@@ -283,7 +283,7 @@ Snaphook.controller('CommunicationController',
                 $('#loginbutton').attr("disabled", "disabled");
                 $scope.Connection = new Strophe.Connection($scope.BOSH_SERVICE);
                 $scope.Snaphooker= $('#username').val();
-                $scope.JID =  $scope.Snaphooker + '@snaphookers/web';
+                $scope.JID =  $scope.Snaphooker + '@snaphookers';
 
                   var callback = function (status) {
                     if (status === Strophe.Status.REGISTER) {
