@@ -1,5 +1,12 @@
 var Snaphook = angular.module('Snaphook', []);
  
+
+$( document ).ready(function() {
+//	$( "#LobbyChatControllerOuter" ).mousedown(function() {
+//		$('#LobbyChatInput').focus();
+//	});
+});
+
  function parseLinks(input) {
 
     var current=0;
@@ -107,7 +114,7 @@ var Snaphook = angular.module('Snaphook', []);
 	}
 	id = id%8;		
 
-	$('#LobbyChatControllerInner').append("<div class=text"+id+">&lt;" + from + "&gt; " + parse(msg) + "<div>");
+	$('#ChatTable tr:last').after("<tr><td class=chat_nick style=\"text-align:right;\"><div class=text"+id+">" + from + "</div></td><td width=0><td><div class=text"+id+">"+parse(msg)+"</div></td></tr>");
 
 	$("#LobbyChatControllerInner").scrollTop($("#LobbyChatControllerInner")[0].scrollHeight);
  }
