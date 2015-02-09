@@ -37,11 +37,12 @@ tr {
 
 .chat_nick {
 
-	padding-right: 5px;
 	max-width: 75px;
 	width: 75px;
 	overflow: hidden;
 	text-align: right;
+	padding: 0px;
+	padding-right: 5px;
 }
 
 .chat_divider {
@@ -49,10 +50,12 @@ tr {
 	background-color: rgba(255,255,255,0.3);
 	width: 1px;
 	overflow: hidden;
+	padding: 0;
 }
 
 .chat_body {
 	width: 100%;	
+	padding: 0;
 }
 
 input    {
@@ -73,6 +76,8 @@ input    {
 
 	box-shadow: 5px 5px 10px black;
  	width: 300px;
+
+	border: 1px solid black;
  }
 
 #LoginControllerInner
@@ -130,6 +135,7 @@ A
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5%;
+	border: 1px solid #000000;
  }
 
 .MainContent{
