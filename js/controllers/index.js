@@ -27,6 +27,13 @@ $( document ).ready(function() {
           found=1;
         }
 
+        if (input.substring(current,current+8)=="https://") {
+
+          start=current;
+          output+="<a target=_blank href=\"http://";
+          found=1;
+        }
+
         if (input.substring(current,current+7)=="http://") {
 
           start=current;
@@ -92,11 +99,44 @@ $( document ).ready(function() {
     return output;
  }
 
+ function parseSize(input) {
+
+   var output="";
+   var current = 0;
+   var dicksInARow=0;
+   var stop=false;
+
+   while (current <input.length) {
+
+	var char = input.charAt(current);
+	
+	if (char=="<") stop=true;
+	if (char==">" && stop) {
+		stop=false;
+	}
+
+	if (!stop) {
+		if (char=='\t' || char==" " || char=="." || char=="\n") dicksInARow=0; else dicksInARow++;
+
+		if (dicksInARow==80) {
+
+	       		dicksInARow=0;
+			output+="<span style=\"font-size:0pt;\"> </span>";
+		}
+	}
+
+	current++;
+	output+=char;
+   }
+
+   return output;
+ }
+
  function parse(input) {
 
     var output = parseLinks(input);
   
-    return output;
+    return parseSize(output);
  }
 
  function log(msg)
@@ -114,7 +154,7 @@ $( document ).ready(function() {
 	}
 	id = id%8;		
 
-	$('#ChatTable tr:last').after("<tr><td class=chat_nick style=\"text-align:right;\"><div class=text"+id+">" + from + "</div></td><td class=cell_divider></td><td><div class=text"+id+">"+parse(msg)+"</div></td></tr>");
+	$('#ChatTable tr:last').after("<tr><td class=chat_nick style=\"text-align:right;\"><div class=text"+id+"><span style=\"color:rgba(0,0,0,0);font-size:0pt;\">&lt;</span>" + from + "<span style=\"color:rgba(0,0,0,0);font-size:0pt;\">&gt;</span></div></td><td class=chat_divider></td><td class=chat_body><div class=text"+id+">"+parse(msg)+"</div></td></tr>");
 
 	$("#LobbyChatControllerInner").scrollTop($("#LobbyChatControllerInner")[0].scrollHeight);
  }

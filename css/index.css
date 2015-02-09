@@ -6,7 +6,7 @@
 	background-size: cover;
 	color:white;
 	font-family: Tahoma,Verdana;
-	line-height: 125%;
+	line-height: 100%;
 	font-size: 9pt;
  } 
 
@@ -14,16 +14,19 @@ table {
 	border-spacing: 0;
 	padding: 0;
 	margin: 0;
+	table-layout: fixed;
+	width: 100%;
 }
 
 
 td {
 	font-family: Tahoma,Verdana;
-	line-height: 120%;
+	line-height: 100%;
 	font-size: 9pt;
 	vertical-align: top;
 	padding: 0;
 	margin: 0;
+	overflow:auto;
 }
 
 
@@ -35,15 +38,21 @@ tr {
 .chat_nick {
 
 	padding-right: 5px;
-	max-width: 150;
+	max-width: 75px;
+	width: 75px;
 	overflow: hidden;
 	text-align: right;
 }
 
-.cell_divider {
+.chat_divider {
 
 	background-color: rgba(255,255,255,0.3);
 	width: 1px;
+	overflow: hidden;
+}
+
+.chat_body {
+	width: 100%;	
 }
 
 input    {
@@ -147,7 +156,7 @@ A
 	padding: 16px;
 }
 
-.text0 { color: #ffffff; margin-left: 5px; }
+.text0 { color: #ffffff; margin-left: 5px;}
 .text1 { color: #ffffdd; margin-left: 5px;}
 .text2 { color: #ffddff; margin-left: 5px;}
 .text3 { color: #ddffff; margin-left: 5px;}
