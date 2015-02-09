@@ -21,7 +21,7 @@ table {
 
 td {
 	font-family: Tahoma,Verdana;
-	line-height: 100%;
+	line-height: 90%;
 	font-size: 9pt;
 	vertical-align: top;
 	padding: 0;
@@ -56,6 +56,7 @@ tr {
 .chat_body {
 	width: 100%;	
 	padding: 0;
+	overflow: hidden;
 }
 
 input    {
