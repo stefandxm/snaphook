@@ -30,7 +30,7 @@ $( document ).ready(function() {
         if (input.substring(current,current+8)=="https://") {
 
           start=current;
-          output+="<a target=_blank href=\"https://";
+          output+="<a target=_blank href=\"";
           found=1;
         }
 
