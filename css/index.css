@@ -171,6 +171,11 @@ A
 .text5 { color: #ffdddd; margin-left: 5px;}
 .text6 { color: #ddffdd; margin-left: 5px;}
 .text7 { color: #dddddd; margin-left: 5px;}
+.text_me { 
+	color: #ffffff; 
+	margin-left: 5px;
+	font-weight: bold;
+}
 
 #BoardRoomInner
 {

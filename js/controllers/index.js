@@ -1,5 +1,6 @@
 var Snaphook = angular.module('Snaphook', []);
  
+var myname="";
 
 $( document ).ready(function() {
 //	$( "#LobbyChatControllerOuter" ).mousedown(function() {
@@ -152,9 +153,15 @@ $( document ).ready(function() {
 	for (var a=0; a<from.length; a++) {
 		id += from[a].charCodeAt(0);
 	}
-	id = id%8;		
+	id = id%8;
 
-	$('#ChatTable tr:last').after("<tr><td class=chat_nick style=\"text-align:right;\"><div class=text"+id+"><span style=\"color:rgba(0,0,0,0);font-size:0pt;\">&lt;</span>" + from + "<span style=\"color:rgba(0,0,0,0);font-size:0pt;\">&gt;</span></div></td><td class=chat_divider></td><td class=chat_body><div class=text"+id+">"+parse(msg)+"</div></td></tr>");
+	var nickid=id;
+	if (myname.toLowerCase() == from.toLowerCase()) {
+
+		nickid = "_me";
+	}
+
+	$('#ChatTable tr:last').after("<tr><td class=chat_nick style=\"text-align:right;\"><div class=text"+nickid+"><span style=\"color:rgba(0,0,0,0);font-size:0pt;\">&lt;</span>" + from + "<span style=\"color:rgba(0,0,0,0);font-size:0pt;\">&gt;</span></div></td><td class=chat_divider></td><td class=chat_body><div class=text"+id+">"+parse(msg)+"</div></td></tr>");
 
 	$("#LobbyChatControllerInner").scrollTop($("#LobbyChatControllerInner")[0].scrollHeight);
  }
@@ -373,6 +380,7 @@ Snaphook.controller('CommunicationController',
             }            
         }
         $scope.Login =  function() { 
+		myname = $('#username').val();
                 $('#loginbutton').attr("disabled", "disabled");
                 $scope.Connection = new Strophe.Connection($scope.BOSH_SERVICE);
                 $scope.Snaphooker= $('#username').val();
