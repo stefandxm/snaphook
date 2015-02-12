@@ -21,7 +21,6 @@ table {
 
 td {
 	font-family: Tahoma,Verdana;
-	line-height: 90%;
 	font-size: 9pt;
 	vertical-align: top;
 	padding: 0;
@@ -129,9 +128,9 @@ A
 	position: absolute;
 	background-color:rgba(0,0,0,0.7);
 	box-shadow: 5px 5px 10px black;
-	width: 80%;
-	height: 80%;
-	left: 10%;
+	width: 60%;
+	height: 700px;
+	left: 20%;
  	display: none;
 	margin-left: auto;
 	margin-right: auto;
@@ -152,15 +151,36 @@ A
 }
 #LobbyChatControllerInner
 {
-	position: absolute;
+	/*position: absolute;*/
+	float:left;
 	text-align: left;
 	vertical-align: top;
  	overflow: auto;
 	top: 0;
-	bottom: 45;
+	bottom: 0;
 	left: 0;
 	right: 0;
-	padding: 16px;
+	padding: 0px;
+	height:665px;
+}
+
+#LobbyChatControllerBottom
+{
+	width:100%;
+	float:left;
+	height:30px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display:block;
+	padding: 0px;
+}
+#LobbyChatInput
+{	
+	background-color:rgba(0,0,0,0.5);
+	color:white;	
+	margin-top: 5px;
+	width:100%;
 }
 
 .text0 { color: #ffffff; margin-left: 5px;}
@@ -194,23 +214,6 @@ input {
 	padding: 5px;
 }
 
-#LobbyChatControllerBottom
-{
-	position: absolute;
-	height:30px;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	display:block;
-	padding: 16px;
-}
-#LobbyChatInput
-{
-	background-color:rgba(0,0,0,0.5);
-	color:white;	
-	width: 100%;
-	margin-top: 5px;
-}
 
  #DebugOuter{
 	background-color:rgba(0,0,0,0.5);

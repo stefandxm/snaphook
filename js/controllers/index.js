@@ -158,7 +158,7 @@ $( document ).ready(function() {
 	var nickid=id;
 	if (myname.toLowerCase() == from.toLowerCase()) {
 
-		nickid = "_me";
+		//nickid = "_me";
 	}
 
 	$('#ChatTable tr:last').after("<tr><td class=chat_nick style=\"text-align:right;\"><div class=text"+nickid+"><span style=\"color:rgba(0,0,0,0);font-size:0pt;\">&lt;</span>" + from + "<span style=\"color:rgba(0,0,0,0);font-size:0pt;\">&gt;</span></div></td><td class=chat_divider></td><td class=chat_body><div class=text"+id+">"+parse(msg)+"</div></td></tr>");
